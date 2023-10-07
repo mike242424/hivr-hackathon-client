@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const AuthNavBar = () => {
   return (
-    <nav className="navbar nav-color">
+    <nav className="navbar color-theme-2 fixed-top">
       <div className="text-start ps-2 sidebar-header">
         <a className="navbar-brand" href="/">
           <img
@@ -19,7 +19,7 @@ const AuthNavBar = () => {
           About
         </Link>
         <Link className="text-dec-none color-theme-one ps-2 pe-4" to="/product">
-          Product
+          Products
         </Link>
       </div>
     </nav>

@@ -2,6 +2,14 @@
   color: #fff;
 }
 
+.color-theme-two {
+  color: #8f4522;
+}
+
+.font-size-one {
+  font-size: 20px;
+}
+
 .nav-color {
   background-color: #eec33d;
 }
@@ -25,12 +33,40 @@
 }
 
 @font-face {
-  font-family: 'YourCustomFont';
-  src: url('./fonts/Village.ttf') format('truetype');
-  /* You can specify other font formats (e.g., woff, woff2) for better browser compatibility. */
+  font-family: "YourCustomFont";
+  src: url("./fonts/Village.ttf") format("truetype");
 }
 
 body {
-  font-family: 'YourCustomFont', Arial, sans-serif;
+  font-family: "YourCustomFont", Arial, sans-serif;
 }
 
+.border {
+  border: 5px solid black;
+}
+
+.color-theme-1 {
+  background-color: #fede8e !important;
+}
+
+.color-theme-2 {
+  background-color: #ffa760 !important;
+}
+/*  sidebar */
+
+.color-theme-3 {
+  color: #8f4522 !important;
+  /*  darkest brown*/
+}
+
+body {
+  background-color: #fede8e !important;
+}
+
+body {
+  background-image: url('./images/background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  margin-top: 75px !important;
+}

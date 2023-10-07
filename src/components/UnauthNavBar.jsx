@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 
 const UnauthNavBar = () => {
   return (
-    <nav className="navbar nav-color">
+    <nav className="navbar color-theme-2 fixed-top">
       <div className="text-start ps-2">
         <NavLink className="navbar-brand" to="/">
           <img
