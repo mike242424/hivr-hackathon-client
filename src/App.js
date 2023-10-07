@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+
+import About from "./components/About";
+import Product from "./components/Product";
+import NotFound from "./components/NotFound";
+import AuthHome from "./components/AuthHome";
+// import UnauthHome from "./components/Unauthome";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route path="/" element={<AuthHome />} />
+      {/* <Route path="/" element={<UnauthHome />} /> */}
+      <Route path="/about" element={<About />} />
+      <Route path="/product" element={<Product />} />
+      <Route path="*" element={<NotFound />} />
+    </Routes>
   );
 }
 
