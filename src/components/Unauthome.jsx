@@ -8,7 +8,7 @@ const UnauthHome = () => {
       <div className="container text-center">
         <div className="row">
           <div className="col-8 offset-2">
-            <h1 className="mt-5">Title</h1>
+            <h1 className="mt-5">Hivr</h1>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, ea
               at, impedit vel dicta consectetur unde molestiae cupiditate autem

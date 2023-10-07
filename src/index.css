@@ -23,3 +23,14 @@
     font-size: 10px !important;
   }
 }
+
+@font-face {
+  font-family: 'YourCustomFont';
+  src: url('./fonts/Village.ttf') format('truetype');
+  /* You can specify other font formats (e.g., woff, woff2) for better browser compatibility. */
+}
+
+body {
+  font-family: 'YourCustomFont', Arial, sans-serif;
+}
+

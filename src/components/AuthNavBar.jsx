@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const AuthNavBar = () => {
   return (
     <nav className="navbar nav-color">
-      <div className="text-start ps-2">
+      <div className="text-start ps-2 sidebar-header">
         <a className="navbar-brand" href="/">
           <img
             src="../../icons8-bee-emoji-96.png"

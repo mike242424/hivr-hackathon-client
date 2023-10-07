@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const UnauthNavBar = () => {
   return (
@@ -28,12 +28,13 @@ const UnauthNavBar = () => {
             aria-label="Password Input"
             placeholder="Password"
           />
-          <button
+          <Link
             className="btn nav-button"
             style={{ backgroundColor: "rgb(49,47,23)", color: "white" }}
+            to="/Home"
           >
             Submit
-          </button>
+          </Link>
         </form>
       </div>
     </nav>

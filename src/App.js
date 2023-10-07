@@ -5,13 +5,13 @@ import About from "./components/About";
 import Product from "./components/Product";
 import NotFound from "./components/NotFound";
 import AuthHome from "./components/AuthHome";
-// import UnauthHome from "./components/Unauthome";
+import UnauthHome from "./components/Unauthome";
 
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<AuthHome />} />
-      {/* <Route path="/" element={<UnauthHome />} /> */}
+      <Route path="/" element={<UnauthHome />} />
+      <Route path="/home" element={<AuthHome />} />
       <Route path="/about" element={<About />} />
       <Route path="/product" element={<Product />} />
       <Route path="*" element={<NotFound />} />
