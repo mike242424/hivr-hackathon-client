@@ -95,6 +95,10 @@ const AuthHome = () => {
     },
   ];
 
+  const addHive = () => {
+    
+  }
+
   return (
     <>
       <AuthNavBar />
@@ -105,6 +109,7 @@ const AuthHome = () => {
         <button
           className="btn"
           style={{ backgroundColor: "rgb(49, 47, 23)", color: 'white'}}
+          onClick={addHive}
         >
           Add Hive
         </button>
