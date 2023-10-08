@@ -25,15 +25,16 @@ const NotFound = () => {
           </div>
         </div>
       </div>
-      <div className="container h-100">
+      <div className="container">
         <div className="row h-100 justify-content-center align-items-center">
-          <div className="col-6 text-center"></div>
-          <img
-            className="img-fluid"
-            src={nickCage}
-            alt="Nick Cage"
-            style={{ height: "400px", width: "auto", margin: "auto" }}
-          />
+          <div className="col-6 text-center">
+            <img
+              className="img-fluid mt-3"
+              src={nickCage}
+              alt="Nick Cage"
+              style={{ height: "400px", width: "auto" }}
+            />
+          </div>
         </div>
       </div>
     </>
