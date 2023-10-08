@@ -227,21 +227,21 @@ const AuthHome = () => {
 
   const temperatureColorClass = (temp) => {
     if (temp < 50 || temp > 80) {
-      return "text-red"; // Apply red text color if below 50 or above 70
+      return "text-red"; 
     }
     return "";
   };
 
   const buzzFactorColorClass = (buzzFactor) => {
     if (buzzFactor < 60) {
-      return "text-red"; // Apply red text color if below 60
+      return "text-red"; 
     }
     return "";
   };
 
   const honeyLevelColorClass = (honeyLevel) => {
     if (honeyLevel < 60) {
-      return "text-red"; // Apply red text color if below 60
+      return "text-red";
     }
     return "";
   };
@@ -250,7 +250,7 @@ const AuthHome = () => {
     <>
       <AuthNavBar />
       <div className="container text-center" style={{ marginTop: "120px" }}>
-        <h1 className="mb-3">
+        <h1 className="mb-3 big-title">
           <strong>Hivr</strong>
         </h1>
         <div className="row">
@@ -364,7 +364,7 @@ const AuthHome = () => {
                   <strong>Queens Age:</strong> {queensAgeInMonths} months
                 </p>
               </div>
-              <hr />
+              <hr/>
               {selectedData.map((entry, index) => (
                 <div key={index} className="row">
                   <p>
@@ -372,13 +372,19 @@ const AuthHome = () => {
                   </p>
                   <div className="col-6">
                     <p>
-                      <strong>Temperature:</strong> {entry.temp} F
+                      <span className={temperatureColorClass(entry.temp)}>
+                        <strong>Temperature:</strong> {entry.temp} F
+                      </span>
                     </p>
                     <p>
-                      <strong>Buzz Factor:</strong> {entry.buzzFactor}
+                      <span className={buzzFactorColorClass(entry.buzzFactor)}>
+                        <strong>Buzz Factor:</strong> {entry.buzzFactor}
+                      </span>
                     </p>
                     <p>
-                      <strong>Honey Level:</strong> {entry.honeyLevel}%
+                      <span className={honeyLevelColorClass(entry.honeyLevel)}>
+                        <strong>Honey Level:</strong> {entry.honeyLevel}%
+                      </span>
                     </p>
                   </div>
                   {index !== selectedData.length - 1 && <hr />}

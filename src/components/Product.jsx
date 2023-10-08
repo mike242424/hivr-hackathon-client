@@ -1,27 +1,48 @@
 import React, { useState } from "react";
-import AuthNavBar from "./AuthNavBar";
 import antennaImage from "../images/angtenna.png";
 import router from "../images/router.png";
 import scale from "../images/scale.png";
+import { Link } from "react-router-dom";
 
 const Product = () => {
-  // Define state variables to track quantities for each product
   const [antennaQuantity, setAntennaQuantity] = useState(0);
   const [scaleQuantity, setScaleQuantity] = useState(0);
   const [gatewayQuantity, setGatewayQuantity] = useState(0);
 
   return (
     <>
-      <AuthNavBar />
-      <div className="container text-center">
+      <nav className="navbar color-theme-2 fixed-top">
+        <div className="text-start ps-2 sidebar-header">
+          <a className="navbar-brand" href="/">
+            <img
+              src="../../icons8-bee-emoji-96.png"
+              width="50"
+              height="50"
+              alt="Bee Emoji Icon"
+            />
+          </a>
+        </div>
+        <div>
+          <Link className="text-dec-none color-theme-one" to="/about">
+            About
+          </Link>
+          <Link className="text-dec-none color-theme-one ps-2" to="/product">
+            Products
+          </Link>
+          <Link to="/checkout" className="text-dec-none color-theme-one ps-2 pe-4">
+            Checkout
+          </Link>
+        </div>
+      </nav>
+      <div className="container">
         <div className="row">
           <div className="col-8 offset-2">
-            <h1 className="mt-5 mb-3">
+            <h1 className="mt-5 mb-3 big-title text-center">
               <strong>Products</strong>
             </h1>
             <div>
               <div
-                className="row"
+                className="row height-change"
                 style={{
                   border: "1px solid lightgrey",
                   borderRadius: "20px",
@@ -62,7 +83,7 @@ const Product = () => {
               </div>
             </div>
             <div
-              className="row"
+              className="row height-change"
               style={{
                 border: "1px solid lightgrey",
                 borderRadius: "10px",
@@ -100,7 +121,7 @@ const Product = () => {
               </div>
             </div>
             <div
-              className="row mb-4"
+              className="row mb-4 height-change"
               style={{
                 border: "1px solid lightgrey",
                 borderRadius: "10px",

@@ -1,22 +1,18 @@
 import React from "react";
 import UnauthNavBar from "./UnauthNavBar";
+import welcomePage from '../images/welcome-page.png';
 
 const UnauthHome = () => {
   return (
-    <>
+    <div>
       <UnauthNavBar />
-      <div className="container text-center">
-        <div className="row">
-          <div className="col-8 offset-2">
-            <h1 className="mt-5">
-              <strong>Welcome to Hivr</strong>
-            </h1>
-            <p>
-            </p>
-          </div>
-        </div>
-      </div>
-    </>
+      <img
+        className="margin-top"
+        src={welcomePage}
+        alt="Welcome Page"
+        style={{ width: "100vw", height: "100vh" }}
+      />
+    </div>
   );
 };
 
