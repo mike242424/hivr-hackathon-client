@@ -4,14 +4,12 @@ import { Route, Routes } from "react-router-dom";
 import About from "./components/About";
 import Product from "./components/Product";
 import NotFound from "./components/NotFound";
-import AuthHome from "./components/AuthHome";
-import UnauthHome from "./components/Unauthome";
+import Home from "./components/Home";
 
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<UnauthHome />} />
-      <Route path="/home" element={<AuthHome />} />
+      <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="/product" element={<Product />} />
       <Route path="*" element={<NotFound />} />

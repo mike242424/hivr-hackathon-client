@@ -1,7 +1,16 @@
-import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 const UnauthNavBar = () => {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleLogin = () => {
+    localStorage.setItem("username", username);
+    localStorage.setItem("password", password);
+
+  };
+
   return (
     <nav className="navbar color-theme-2 fixed-top">
       <div className="text-start ps-2">
@@ -21,20 +30,26 @@ const UnauthNavBar = () => {
             className="form-control me-2 nav-input"
             aria-label="Username Input"
             placeholder="Username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            required
           />
           <input
             type="password"
             className="form-control me-2 nav-input"
             aria-label="Password Input"
             placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
           />
-          <Link
-            className="btn nav-button"
-            style={{ backgroundColor: "rgb(49,47,23)", color: "white" }}
+          <button
+            className="btn color-theme-3"
             to="/Home"
+            onClick={handleLogin}
           >
             Submit
-          </Link>
+          </button>
         </form>
       </div>
     </nav>

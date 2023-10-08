@@ -1,17 +1,18 @@
+body {
+  background-image: url("./images/background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin-top: 75px !important;
+  font-family: "Village", Arial, sans-serif !important;
+}
+
 .color-theme-one {
   color: #fff;
 }
 
-.color-theme-two {
-  color: #8f4522;
-}
-
 .font-size-one {
   font-size: 20px;
-}
-
-.nav-color {
-  background-color: #eec33d;
 }
 
 .nav-button:hover {
@@ -23,7 +24,7 @@
 }
 
 .text-dec-none:hover {
-  color: rgb(49, 47, 23);
+  color:  #8f4522 !important;
 }
 
 @media (max-width: 650px) {
@@ -33,17 +34,14 @@
 }
 
 @font-face {
-  font-family: "YourCustomFont";
-  src: url("./fonts/Village.ttf") format("truetype");
+  font-family: "Village" !important;
+  src: url("/src/fonts/village.ttf") format("truetype") !important;
+  font-display: swap;
 }
 
-body {
-  font-family: "YourCustomFont", Arial, sans-serif;
-}
-
-.border {
+/* .border {
   border: 5px solid black;
-}
+} */
 
 .color-theme-1 {
   background-color: #fede8e !important;
@@ -52,21 +50,17 @@ body {
 .color-theme-2 {
   background-color: #ffa760 !important;
 }
-/*  sidebar */
 
 .color-theme-3 {
-  color: #8f4522 !important;
-  /*  darkest brown*/
+  background-color: #8f4522 !important;
+  color: white !important;
 }
 
-body {
-  background-color: #fede8e !important;
+.color-theme-3:hover {
+  background-color: #6e2502 !important;
+  color: white !important;
 }
 
-body {
-  background-image: url('./images/background.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed; 
-  margin-top: 75px !important;
+.text-red {
+  color: red !important;
 }
