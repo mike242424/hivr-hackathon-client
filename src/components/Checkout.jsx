@@ -11,7 +11,6 @@ const Checkout = () => {
             <h1 className="mt-5 big-title">
               <strong>Checkout</strong>
             </h1>
-            
           </div>
         </div>
       </div>

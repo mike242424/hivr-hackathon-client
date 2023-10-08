@@ -8,6 +8,11 @@ const Product = () => {
   const [antennaQuantity, setAntennaQuantity] = useState(0);
   const [scaleQuantity, setScaleQuantity] = useState(0);
   const [gatewayQuantity, setGatewayQuantity] = useState(0);
+  const [cartCount, setCartCount] = useState(0);
+
+  const updateCartCount = (quantity) => {
+    setCartCount(cartCount + quantity);
+  };
 
   return (
     <>
@@ -29,8 +34,11 @@ const Product = () => {
           <Link className="text-dec-none color-theme-one ps-2" to="/product">
             Products
           </Link>
-          <Link to="/checkout" className="text-dec-none color-theme-one ps-2 pe-4">
-            Checkout
+          <Link
+            to="/checkout"
+            className="text-dec-none color-theme-one ps-2 pe-4"
+          >
+            Cart ({cartCount})
           </Link>
         </div>
       </nav>
@@ -64,16 +72,20 @@ const Product = () => {
                   <p className="text-start">$65</p>
                   <div className="d-flex align-items-center">
                     <button
-                      onClick={() => setAntennaQuantity(antennaQuantity + 1)}
+                      onClick={() => {
+                        setAntennaQuantity(antennaQuantity + 1);
+                        updateCartCount(1);
+                      }}
                       className="btn color-theme-3 me-2"
                     >
                       +
                     </button>
                     <span>{antennaQuantity}</span>
                     <button
-                      onClick={() =>
-                        setAntennaQuantity(Math.max(0, antennaQuantity - 1))
-                      }
+                      onClick={() => {
+                        setAntennaQuantity(Math.max(0, antennaQuantity - 1));
+                        updateCartCount(-1);
+                      }}
                       className="btn color-theme-3 ms-2"
                     >
                       -
@@ -103,16 +115,20 @@ const Product = () => {
                 <p className="text-start">$40</p>
                 <div className="d-flex align-items-center">
                   <button
-                    onClick={() => setScaleQuantity(scaleQuantity + 1)}
+                    onClick={() => {
+                      setScaleQuantity(scaleQuantity + 1);
+                      updateCartCount(1);
+                    }}
                     className="btn color-theme-3 me-2"
                   >
                     +
                   </button>
                   <span>{scaleQuantity}</span>
                   <button
-                    onClick={() =>
-                      setScaleQuantity(Math.max(0, scaleQuantity - 1))
-                    }
+                    onClick={() => {
+                      setScaleQuantity(Math.max(0, scaleQuantity - 1));
+                      updateCartCount(-1);
+                    }}
                     className="btn color-theme-3 ms-2"
                   >
                     -
@@ -143,16 +159,20 @@ const Product = () => {
                 <p className="text-start">$200</p>
                 <div className="d-flex align-items-center">
                   <button
-                    onClick={() => setGatewayQuantity(gatewayQuantity + 1)}
+                    onClick={() => {
+                      setGatewayQuantity(gatewayQuantity + 1);
+                      updateCartCount(1);
+                    }}
                     className="btn btn me-2 color-theme-3"
                   >
                     +
                   </button>
                   <span>{gatewayQuantity}</span>
                   <button
-                    onClick={() =>
-                      setGatewayQuantity(Math.max(0, gatewayQuantity - 1))
-                    }
+                    onClick={() => {
+                      setGatewayQuantity(Math.max(0, gatewayQuantity - 1));
+                      updateCartCount(-1);
+                    }}
                     className="btn ms-2 color-theme-3"
                   >
                     -
